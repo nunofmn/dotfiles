@@ -48,7 +48,6 @@ Plug 'mhartington/oceanic-next'
 Plug 'morhetz/gruvbox'
 Plug 'rakr/vim-one'
 Plug 'kaicataldo/material.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'wokalski/autocomplete-flow'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
@@ -475,6 +474,9 @@ let g:used_javascript_libs = 'underscore,jquery,react,requirejs,jasmine,chai,d3'
 let g:ale_fixers = {
 \   'javascript': ['prettier_eslint'],
 \ }
+let g:ale_linters = {
+\   'javascript': ['flow', 'flow-language-server', 'eslint'],
+\ }
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_use_local_config = 1
 " vim-javascript
@@ -528,9 +530,6 @@ let g:material_theme_style = 'dark'
 let g:material_terminal_italics = 1
 execute "set t_8f=\e[38;2;%lu;%lu;%lum"
 execute "set t_8b=\e[48;2;%lu;%lu;%lum"
-
-" Deoplete config
-let g:deoplete#enable_at_startup = 1
 
 " neosnippet
 let g:neosnippet#enable_completed_snippet = 1
