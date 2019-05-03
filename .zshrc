@@ -40,6 +40,8 @@ bindkey '\e[B' history-beginning-search-forward
 source $ZSH/oh-my-zsh.sh
 source ~/.bash_profile
 
+. /usr/local/etc/profile.d/z.sh
+
 # tmux alias
 alias tmux="TERM=screen-256color-bce tmux"
 alias vim="nvim"

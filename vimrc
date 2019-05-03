@@ -48,10 +48,10 @@ Plug 'mhartington/oceanic-next'
 Plug 'morhetz/gruvbox'
 Plug 'rakr/vim-one'
 Plug 'kaicataldo/material.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'wokalski/autocomplete-flow'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
-Plug 'raghur/vim-ghost', {'do': ':GhostInstall'}
 
 "" Go plugins
 
@@ -537,3 +537,8 @@ let g:neosnippet#enable_completed_snippet = 1
 " vim-jsx config
 "hi xmlAttrib cterm=italic ctermfg=214
 au BufNewFile,BufRead *.jsx setlocal ft=html ft=javascript
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
+let g:javascript_plugin_flow = 1
